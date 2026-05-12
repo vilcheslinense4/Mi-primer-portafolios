@@ -1,0 +1,17 @@
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.proyecto {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+}
