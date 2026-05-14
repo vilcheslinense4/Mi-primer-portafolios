@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Pro | VilchesLinense</title>
+    <title>Mi Portafolio Real | VilchesLinense</title>
     <style>
-        /* Tu estilo original recuperado */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
         body {
@@ -18,132 +17,126 @@
             padding: 40px 20px;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 50px;
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; margin-bottom: 5px; }
+        
+        .mi-descripcion { 
+            font-size: 1.1rem; 
+            margin-bottom: 20px; 
+            opacity: 0.9; 
+            max-width: 600px;
         }
 
-        h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
-        
-        #reloj {
-            font-size: 1.2rem;
+        /* Bloque de Tiempo */
+        .contenedor-tiempo {
             background: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 50px;
+            padding: 15px 30px;
+            border-radius: 20px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.2);
-            display: inline-block;
+            text-align: center;
         }
+        #fecha-actual { display: block; font-size: 1rem; margin-bottom: 5px; text-transform: capitalize; }
+        #reloj-actual { display: block; font-size: 1.8rem; font-weight: bold; color: #00d2ff; }
 
-        .container {
+        .grid-proyectos {
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
 
-        /* Tarjetas con efecto cristal */
-        .proyecto {
+        .tarjeta {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
             padding: 25px;
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
-        .proyecto:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+        .tarjeta:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.2); }
+        h3 { color: #00d2ff; margin-bottom: 12px; font-size: 1.4rem; }
+        p { font-size: 0.95rem; line-height: 1.4; margin-bottom: 20px; flex-grow: 1; }
 
-        h3 { font-size: 1.4rem; margin-bottom: 10px; color: #00d2ff; }
-        p { font-size: 0.95rem; line-height: 1.5; opacity: 0.9; margin-bottom: 20px; }
-
-        .btn {
+        .enlace-proyecto {
             background: #00d2ff;
             color: white;
             text-decoration: none;
-            padding: 10px;
+            padding: 12px;
             border-radius: 12px;
             text-align: center;
             font-weight: bold;
             transition: 0.3s;
         }
-
-        .btn:hover { background: #009ec3; }
-
-        footer { margin-top: 50px; opacity: 0.6; font-size: 0.9rem; }
+        .enlace-proyecto:hover { background: #009ec3; box-shadow: 0 5px 15px rgba(0,210,255,0.4); }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Mi Portafolio de Proyectos</h1>
-        <p style="margin-bottom: 15px;">Desarrollador Full Stack en proceso 🚀</p>
-        <div id="reloj">Cargando hora...</div>
+        <h1>VilchesLinense4</h1>
+        <p class="mi-descripcion">Desarrollador Full Stack en formación. Aquí puedes ver mis aplicaciones reales y mi progreso diario. 🚀</p>
+        
+        <div class="contenedor-tiempo">
+            <span id="fecha-actual"></span>
+            <span id="reloj-actual"></span>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- PROYECTO 6: EL NUEVO -->
-        <div class="proyecto" style="border: 2px solid #00d2ff;">
+    <div class="grid-proyectos">
+        <!-- 1. APP CLIMA -->
+        <div class="tarjeta" style="border: 2px solid #00d2ff;">
             <h3>🌤️ App del Clima Pro</h3>
-            <p>Consulta el tiempo en tiempo real usando la API de OpenWeather. Diseño dinámico con Glassmorphism.</p>
-            <a href="https://vilcheslinense4.github.io/app-clima-pro/" target="_blank" class="btn">Ver Proyecto</a>
+            <p>Consulta el tiempo de cualquier ciudad en tiempo real con datos de OpenWeather.</p>
+            <a href="https://vilcheslinense4.github.io/app-clima-pro/" class="enlace-proyecto">Abrir Aplicación</a>
         </div>
 
-        <!-- PROYECTO 5 -->
-        <div class="proyecto">
-            <h3>📚 Documentación Técnica</h3>
-            <p>Página estructurada para organizar información y guías de usuario de forma profesional.</p>
-            <a href="https://vilcheslinense4.github.io/technical-docs/" target="_blank" class="btn">Ver Proyecto</a>
+        <!-- 2. LISTA DE TAREAS -->
+        <div class="tarjeta">
+            <h3>✅ Lista de Tareas</h3>
+            <p>Gestiona tus tareas diarias: añade, marca como completadas y organiza tu día.</p>
+            <a href="https://vilcheslinense4.github.io/todo-list/" class="enlace-proyecto">Ver Proyecto</a>
         </div>
 
-        <!-- PROYECTO 4 -->
-        <div class="proyecto">
-            <h3>📝 Formulario de Encuesta</h3>
-            <p>Sistema de captura de datos con validaciones personalizadas y diseño limpio.</p>
-            <a href="https://vilcheslinense4.github.io/survey-form/" target="_blank" class="btn">Ver Proyecto</a>
+        <!-- 3. GENERADOR QR -->
+        <div class="tarjeta">
+            <h3>📲 Generador de QR</h3>
+            <p>Herramienta para crear códigos QR personalizados al instante.</p>
+            <a href="https://vilcheslinense4.github.io/qr-generator/" class="enlace-proyecto">Ver Proyecto</a>
         </div>
 
-        <!-- PROYECTO 3 -->
-        <div class="proyecto">
-            <h3>⭐ Página de Tributo</h3>
-            <p>Diseño dedicado a una figura pública practicando maquetación avanzada de imágenes.</p>
-            <a href="https://vilcheslinense4.github.io/tribute-page/" target="_blank" class="btn">Ver Proyecto</a>
+        <!-- 4. SEMÁFORO -->
+        <div class="tarjeta">
+            <h3>🚦 El Semáforo</h3>
+            <p>Simulación de lógica vial con cambios de estado controlados por JavaScript.</p>
+            <a href="https://vilcheslinense4.github.io/semaforo/" class="enlace-proyecto">Ver Proyecto</a>
         </div>
 
-        <!-- PROYECTO 2 -->
-        <div class="proyecto">
-            <h3>🚀 Landing Page</h3>
-            <p>Página de aterrizaje optimizada para ventas y presentación de productos.</p>
-            <a href="https://vilcheslinense4.github.io/landing-page/" target="_blank" class="btn">Ver Proyecto</a>
-        </div>
-
-        <!-- PROYECTO 1 -->
-        <div class="proyecto">
-            <h3>📄 Currículum Vitae</h3>
-            <p>Mi primer proyecto: Estructura HTML básica para un CV online profesional.</p>
-            <a href="https://vilcheslinense4.github.io/cv-personal/" target="_blank" class="btn">Ver Proyecto</a>
+        <!-- 5. CALCULADORA -->
+        <div class="tarjeta">
+            <h3>🔢 Calculadora</h3>
+            <p>App funcional para realizar operaciones matemáticas con un diseño moderno.</p>
+            <a href="https://vilcheslinense4.github.io/calculadora/" class="enlace-proyecto">Ver Proyecto</a>
         </div>
     </div>
 
-    <footer>
-        © 2024 VilchesLinense4 - La Línea de la Concepción
-    </footer>
-
     <script>
-        // Función para el reloj que tanto te gusta
         function actualizarReloj() {
             const ahora = new Date();
-            const opciones = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            document.getElementById('reloj').innerText = ahora.toLocaleTimeString('es-ES', opciones);
+            
+            // Fecha formato: jueves, 14 de mayo de 2026
+            const opcionesFecha = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+            document.getElementById('fecha-actual').innerText = ahora.toLocaleDateString('es-ES', opcionesFecha);
+            
+            // Hora formato: 20:45:12
+            document.getElementById('reloj-actual').innerText = ahora.toLocaleTimeString('es-ES');
         }
+        
         setInterval(actualizarReloj, 1000);
         actualizarReloj();
     </script>
