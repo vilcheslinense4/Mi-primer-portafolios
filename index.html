@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VilchesLinense | Developer Portfolio</title>
+    <title>VilchesLinense | Portafolio</title>
     <style>
         :root {
             --bg: #0a0f1a;
@@ -30,99 +30,107 @@
 
         .header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            /* Nombre elástico para que no se corte en el móvil */
+            font-size: clamp(2rem, 8vw, 3rem); 
+            margin-bottom: 5px;
             background: linear-gradient(to right, #fff, var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .titulo-principal {
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
         }
 
         .badge-container {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin: 20px 0;
+            margin-bottom: 25px;
             flex-wrap: wrap;
         }
 
         .badge {
             background: rgba(0, 210, 255, 0.1);
             color: var(--accent);
-            padding: 5px 15px;
+            padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
             border: 1px solid rgba(0, 210, 255, 0.3);
         }
 
         #reloj {
-            font-family: 'Courier New', monospace;
-            color: var(--accent);
-            font-size: 1.1rem;
-            margin-top: 15px;
-            opacity: 0.8;
+            font-size: 1rem;
+            color: var(--text);
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 1px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: inline-block;
+            padding-top: 10px;
         }
 
         .grid-proyectos {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
 
         .proyecto {
             background: var(--card-bg);
             backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 24px;
+            padding: 25px;
+            border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             text-align: left;
-            position: relative;
-            overflow: hidden;
         }
 
         .proyecto:hover {
-            transform: translateY(-12px);
+            transform: translateY(-8px);
             border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 210, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .proyecto h2 {
             margin-top: 0;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
 
         .proyecto p {
             color: var(--secondary-text);
-            line-height: 1.6;
-            font-size: 0.95rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
         }
 
         .boton-ver {
-            display: inline-block;
-            margin-top: 20px;
             color: var(--accent);
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        .boton-ver:hover {
+            font-size: 0.85rem;
+            text-transform: uppercase;
             letter-spacing: 1px;
-            text-shadow: 0 0 8px var(--accent);
         }
 
-        .boton-ver::after {
-            content: ' →';
-        }
+        .boton-ver::after { content: ' →'; }
     </style>
 </head>
 <body>
@@ -130,42 +138,49 @@
     <div class="container">
         <div class="header">
             <h1>VilchesLinense</h1>
-            <p style="color: var(--secondary-text); font-size: 1.2rem;">Desarrollador Full Stack en formación</p>
+            <div class="titulo-principal">Desarrollador Full Stack en formación</div>
+            
+            <!-- Tu nueva descripción breve -->
+            <p class="bio">
+                Principiante entusiasta en el mundo de la programación. 
+                Aprendiendo a construir aplicaciones interactivas y 
+                explorando nuevas tecnologías paso a paso.
+            </p>
             
             <div class="badge-container">
                 <span class="badge">HTML5</span>
                 <span class="badge">CSS3</span>
                 <span class="badge">JavaScript</span>
-                <span class="badge">Git/GitHub</span>
-                <span class="badge">UI Design</span>
+                <span class="badge">GitHub</span>
             </div>
 
-            <div id="reloj">Cargando sistema...</div>
+            <!-- Reloj limpio (sin el SYS_LOG) -->
+            <div id="reloj">Cargando fecha y hora...</div>
         </div>
 
         <div class="grid-proyectos">
             <div class="proyecto">
                 <h2>🚦 Semáforo</h2>
-                <p>Simulador inteligente con control de tiempos y lógica de estados circular.</p>
-                <a href="./semaforo/index.html" class="boton-ver">EXPLORAR</a>
+                <p>Simulador con lógica de estados para entender los tiempos de control vial.</p>
+                <a href="./semaforo/index.html" class="boton-ver">Ver Proyecto</a>
             </div>
 
             <div class="proyecto">
                 <h2>🧮 Calculadora</h2>
-                <p>Interfaz matemática procesada en tiempo real con diseño minimalista.</p>
-                <a href="./calculadora/index.html" class="boton-ver">EXPLORAR</a>
+                <p>Herramienta lógica para realizar operaciones matemáticas con una interfaz limpia.</p>
+                <a href="./calculadora/index.html" class="boton-ver">Ver Proyecto</a>
             </div> 
 
             <div class="proyecto">
                 <h2>📝 Task Manager</h2>
-                <p>Aplicación de gestión con persistencia en LocalStorage para cada usuario.</p>
-                <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="boton-ver">EXPLORAR</a>
+                <p>Gestor de tareas que guarda la información en el dispositivo del usuario.</p>
+                <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="boton-ver">Ver Proyecto</a>
             </div>
 
             <div class="proyecto">
                 <h2>📱 QR Generator</h2>
-                <p>Herramienta de codificación de datos instantánea mediante librerías externas.</p>
-                <a href="https://vilcheslinense4.github.io/generador-qr/" class="boton-ver">EXPLORAR</a>
+                <p>Conversor de enlaces y textos a códigos QR visuales al instante.</p>
+                <a href="https://vilcheslinense4.github.io/generador-qr/" class="boton-ver">Ver Proyecto</a>
             </div>
         </div>
     </div>
@@ -173,10 +188,17 @@
     <script>
         function actualizarReloj() {
             const ahora = new Date();
-            const opciones = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-            const fecha = ahora.toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase();
-            const tiempo = ahora.toLocaleTimeString('es-ES', opciones);
-            document.getElementById('reloj').innerText = `SYS_LOG: ${fecha} | ${tiempo}`;
+            const fecha = ahora.toLocaleDateString('es-ES', { 
+                day: '2-digit', 
+                month: 'short', 
+                year: 'numeric' 
+            });
+            const tiempo = ahora.toLocaleTimeString('es-ES', { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            });
+            document.getElementById('reloj').innerText = `${fecha} | ${tiempo}`;
         }
         setInterval(actualizarReloj, 1000);
         actualizarReloj();
