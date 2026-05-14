@@ -18,11 +18,16 @@
         header { text-align: center; margin-bottom: 30px; }
         h1 { font-size: 2.8rem; margin-bottom: 10px; }
         .descripcion { font-size: 1.1rem; margin-bottom: 20px; opacity: 0.9; max-width: 600px; }
+        
+        /* Tus burbujas de habilidades (image_47) */
         .skills-container { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
         .skill-tag { border: 1.5px solid #00d2ff; color: #00d2ff; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; background: rgba(0, 210, 255, 0.05); }
+        
+        /* Tu reloj y fecha (image_46) */
         .info-tiempo { background: rgba(255, 255, 255, 0.1); padding: 15px 35px; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); text-align: center; margin-bottom: 40px; }
         #fecha { display: block; font-size: 1rem; text-transform: capitalize; margin-bottom: 5px; }
         #reloj { display: block; font-size: 2rem; font-weight: bold; color: #00d2ff; }
+
         .container { width: 100%; max-width: 900px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .proyecto { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); padding: 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.3s; display: flex; flex-direction: column; }
         .proyecto:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.15); }
@@ -43,33 +48,40 @@
             <span id="reloj"></span>
         </div>
     </header>
+
     <div class="container">
+        <!-- 1. CLIMA -->
         <div class="proyecto" style="border: 2px solid #00d2ff;">
             <h3>🌤️ App del Clima Pro</h3>
             <p>Consulta el tiempo en tiempo real. Proyecto con API externa.</p>
             <a href="https://vilcheslinense4.github.io/app-clima-pro/" class="btn">Abrir App</a>
         </div>
+        <!-- 2. LISTA DE TAREAS (Link corregido) -->
         <div class="proyecto">
             <h3>✅ Lista de Tareas</h3>
             <p>Organizador interactivo para tus tareas diarias.</p>
             <a href="https://vilcheslinense4.github.io/To-Do-List/" class="btn">Ver Proyecto</a>
         </div>
+        <!-- 3. GENERADOR QR (Link corregido) -->
         <div class="proyecto">
             <h3>📲 Generador QR</h3>
             <p>Crea códigos QR personalizados al instante.</p>
             <a href="https://vilcheslinense4.github.io/Generador-QR/" class="btn">Ver Proyecto</a>
         </div>
+        <!-- 4. SEMÁFORO (Link corregido) -->
         <div class="proyecto">
             <h3>🚦 Semáforo</h3>
             <p>Lógica vial y control de estados con JavaScript.</p>
             <a href="https://vilcheslinense4.github.io/Semaforo/" class="btn">Ver Proyecto</a>
         </div>
+        <!-- 5. CALCULADORA (Link corregido) -->
         <div class="proyecto">
             <h3>🔢 Calculadora</h3>
             <p>App funcional para operaciones matemáticas.</p>
             <a href="https://vilcheslinense4.github.io/Calculadora/" class="btn">Ver Proyecto</a>
         </div>
     </div>
+
     <script>
         function actualizar() {
             const ahora = new Date();
