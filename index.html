@@ -17,98 +17,64 @@
         }
         header { text-align: center; margin-bottom: 30px; }
         h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .descripcion { font-size: 1.1rem; margin-bottom: 20px; opacity: 0.9; max-width: 600px; }
         
-        .skills-container { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
-        .skill-tag { border: 1.5px solid #00d2ff; color: #00d2ff; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; background: rgba(0, 210, 255, 0.1); }
-        
-        .info-tiempo { background: rgba(255, 255, 255, 0.1); padding: 15px 35px; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); text-align: center; margin-bottom: 40px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-        #fecha { display: block; font-size: 1rem; text-transform: capitalize; margin-bottom: 5px; opacity: 0.8; }
+        .info-tiempo { background: rgba(255, 255, 255, 0.1); padding: 15px 35px; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); text-align: center; margin-bottom: 40px; }
         #reloj { display: block; font-size: 2.2rem; font-weight: bold; color: #00d2ff; }
 
         .container { width: 100%; max-width: 1000px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .proyecto { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); padding: 25px; border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.4s; display: flex; flex-direction: column; justify-content: space-between; }
-        .proyecto:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.2); border-color: #00d2ff; box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+        .proyecto:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.2); border-color: #00d2ff; }
         
         h3 { color: #00d2ff; margin-bottom: 12px; font-size: 1.4rem; }
-        p { margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; opacity: 0.9; }
         .btn { background: #00d2ff; color: white; text-decoration: none; padding: 12px; border-radius: 15px; text-align: center; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: #009ec3; letter-spacing: 1px; }
+        .btn:hover { background: #009ec3; }
 
-        footer { margin-top: 50px; opacity: 0.6; font-size: 0.9rem; }
+        footer { margin-top: 50px; opacity: 0.6; }
     </style>
 </head>
 <body>
     <header>
         <h1>VilchesLinense4</h1>
-        <p class="descripcion">Desarrollador Full Stack en formación. Aquí puedes ver mis aplicaciones reales y mi progreso diario. 🚀</p>
-        <div class="skills-container">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">APIs</span>
-            <span class="skill-tag">GitHub</span>
-        </div>
         <div class="info-tiempo">
-            <span id="fecha"></span>
             <span id="reloj"></span>
         </div>
     </header>
 
     <div class="container">
         <!-- 1. APP CLIMA -->
-        <div class="proyecto" style="border: 2px solid #00d2ff;">
+        <div class="proyecto">
             <h3>🌤️ App del Clima Pro</h3>
             <p>Consulta el tiempo en tiempo real.</p>
             <a href="https://vilcheslinense4.github.io/app-clima-pro/" class="btn">Abrir App</a>
         </div>
 
-        <!-- 2. CONVERSOR DE DIVISAS (Según image_58.png) -->
+        <!-- 2. CONVERSOR DE DIVISAS -->
         <div class="proyecto">
             <h3>💱 Conversor de Divisas</h3>
-            <p>Calculadora de cambio de moneda en tiempo real.</p>
+            <p>Calculadora de cambio de moneda.</p>
             <a href="https://vilcheslinense4.github.io/conversor-divisas/" class="btn">Ver Proyecto</a>
         </div>
 
-        <!-- 3. LISTA DE TAREAS (Según image_56.png - Tenía el -js final) -->
+        <!-- 3. LISTA DE TAREAS -->
         <div class="proyecto">
             <h3>✅ Lista de Tareas</h3>
             <p>Organizador interactivo con JS.</p>
             <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="btn">Ver Proyecto</a>
         </div>
 
-        <!-- 4. GENERADOR QR (Según image_57.png - Sin el -js) -->
+        <!-- 4. GENERADOR QR -->
         <div class="proyecto">
             <h3>📲 Generador QR</h3>
             <p>Genera códigos QR al instante.</p>
             <a href="https://vilcheslinense4.github.io/generador-qr/" class="btn">Ver Proyecto</a>
         </div>
-
-        <!-- 5. SEMÁFORO (Según image_59.png - Todo en minúsculas) -->
-        <div class="proyecto">
-            <h3>🚦 Semáforo interactivo</h3>
-            <p>Lógica de estados con JavaScript.</p>
-            <a href="https://vilcheslinense4.github.io/Mi-primer-portafolio/semaforo/" class="btn">Ver Proyecto</a>
-        </div>
-
-        <!-- 6. CALCULADORA (Según image_59.png - Todo en minúsculas) -->
-        <div class="proyecto">
-            <h3>🔢 Calculadora</h3>
-            <p>Interfaz matemática completa.</p>
-            <a href="https://vilcheslinense4.github.io/Mi-primer-portafolio/calculadora/" class="btn">Ver Proyecto</a>
-        </div>
     </div>
 
-    <footer>
-        © 2024 - Creado por VilchesLinense4
-    </footer>
+    <footer>© 2024 - VilchesLinense4</footer>
 
     <script>
         function actualizar() {
-            const ahora = new Date();
-            const opciones = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-            document.getElementById('fecha').innerText = ahora.toLocaleDateString('es-ES', opciones);
-            document.getElementById('reloj').innerText = ahora.toLocaleTimeString('es-ES');
+            document.getElementById('reloj').innerText = new Date().toLocaleTimeString('es-ES');
         }
         setInterval(actualizar, 1000);
         actualizar();
