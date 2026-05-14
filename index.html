@@ -3,212 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VilchesLinense | Portafolio</title>
+    <title>Mi Portafolio | VilchesLinense</title>
     <style>
-        :root {
-            --bg: #0a0f1a;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --accent: #00d2ff;
-            --text: #ffffff;
-            --secondary-text: #94a3b8;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg);
-            background-image: radial-gradient(circle at top right, #1e293b, #0a0f1a);
-            color: var(--text);
-            margin: 0;
-            padding: 40px 20px;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 8vw, 3rem); 
-            margin-bottom: 5px;
-            background: linear-gradient(to right, #fff, var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .titulo-principal {
-            color: var(--accent);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .bio {
-            color: var(--secondary-text);
-            font-size: 0.95rem;
-            max-width: 500px;
-            margin: 0 auto 20px;
-            line-height: 1.5;
-        }
-
-        .badge-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: rgba(0, 210, 255, 0.1);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            border: 1px solid rgba(0, 210, 255, 0.3);
-        }
-
-        #reloj {
-            font-size: 1rem;
-            color: var(--text);
-            opacity: 0.9;
-            font-weight: 300;
-            letter-spacing: 1px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            display: inline-block;
-            padding-top: 10px;
-        }
-
-        .grid-proyectos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .proyecto {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            text-align: left;
-        }
-
-        .proyecto:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .proyecto h2 {
-            margin-top: 0;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .proyecto p {
-            color: var(--secondary-text);
-            line-height: 1.5;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        .boton-ver {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .boton-ver::after { content: ' →'; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        header { background: #333; color: #fff; padding: 1rem 0; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; }
+        .proyecto { background: #fff; margin-bottom: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h3 { margin-top: 0; color: #444; }
+        .btn { display: inline-block; background: #333; color: #fff; padding: 10px 15px; text-decoration: none; border-radius: 5px; margin-top: 10px; transition: 0.3s; }
+        .btn:hover { background: #555; }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Mi Portafolio de Proyectos</h1>
+        <p>Aprendiendo Desarrollo Web y Automatización</p>
+    </header>
 
     <div class="container">
-        <div class="header">
-            <h1>VilchesLinense</h1>
-            <div class="titulo-principal">Desarrollador Full Stack en formación</div>
-            
-            <p class="bio">
-                Principiante entusiasta en el mundo de la programación. 
-                Aprendiendo a construir aplicaciones interactivas y 
-                explorando nuevas tecnologías paso a paso.
-            </p>
-            
-            <!-- SECCIÓN DE ETIQUETAS ACTUALIZADA -->
-            <div class="badge-container">
-                <span class="badge">HTML5</span>
-                <span class="badge">CSS3</span>
-                <span class="badge">JavaScript</span>
-                <span class="badge">AsyncJS</span>
-                <span class="badge">APIs</span>
-                <span class="badge">GitHub</span>
-            </div>
-
-            <div id="reloj">Cargando fecha y hora...</div>
+        <!-- Proyecto 1: Currículum Vitae -->
+        <div class="proyecto">
+            <h3>📄 Mi Currículum Vitae</h3>
+            <p>Mi primer proyecto: Un CV profesional utilizando HTML puro para aprender la estructura básica.</p>
+            <a href="https://vilcheslinense4.github.io/cv-personal/" target="_blank" class="btn">Ver Proyecto</a>
         </div>
 
-        <div class="grid-proyectos">
-            <div class="proyecto">
-                <h2>🚦 Semáforo</h2>
-                <p>Simulador con lógica de estados para entender los tiempos de control vial.</p>
-                <a href="./semaforo/index.html" class="boton-ver" target="_blank">Ver Proyecto</a>
-            </div>
-
-            <div class="proyecto">
-                <h2>🧮 Calculadora</h2>
-                <p>Herramienta lógica para realizar operaciones matemáticas con una interfaz limpia.</p>
-                <a href="./calculadora/index.html" class="boton-ver" target="_blank">Ver Proyecto</a>
-            </div> 
-
-            <div class="proyecto">
-                <h2>📝 Task Manager</h2>
-                <p>Gestor de tareas que guarda la información en el dispositivo del usuario.</p>
-                <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="boton-ver" target="_blank">Ver Proyecto</a>
-            </div>
-
-            <div class="proyecto">
-                <h2>📱 QR Generator</h2>
-                <p>Conversor de enlaces y textos a códigos QR visuales al instante.</p>
-                <a href="https://vilcheslinense4.github.io/generador-qr/" class="boton-ver" target="_blank">Ver Proyecto</a>
-            </div>
-
-            <div class="proyecto">
-                <h2>💱 Conversor Pro</h2>
-                <p>Calculadora de divisas real-time conectada a internet. Ideal para cambios GBP/EUR.</p>
-                <a href="https://vilcheslinense4.github.io/conversor-divisas/" class="boton-ver" target="_blank">Ver Proyecto</a>
-            </div>
+        <!-- Proyecto 2: Landing Page de Producto -->
+        <div class="proyecto">
+            <h3>🚀 Landing Page de Ventas</h3>
+            <p>Página de aterrizaje con diseño moderno centrada en la conversión y el estilo visual.</p>
+            <a href="https://vilcheslinense4.github.io/landing-page/" target="_blank" class="btn">Ver Proyecto</a>
         </div>
+
+        <!-- Proyecto 3: Página de Tributo -->
+        <div class="proyecto">
+            <h3>⭐ Página de Tributo</h3>
+            <p>Un homenaje diseñado para practicar el manejo de imágenes y bloques de texto en CSS.</p>
+            <a href="https://vilcheslinense4.github.io/tribute-page/" target="_blank" class="btn">Ver Proyecto</a>
+        </div>
+
+        <!-- Proyecto 4: Formulario de Registro -->
+        <div class="proyecto">
+            <h3>📝 Formulario de Encuesta</h3>
+            <p>Proyecto enfocado en la captura de datos y validación de campos para usuarios.</p>
+            <a href="https://vilcheslinense4.github.io/survey-form/" target="_blank" class="btn">Ver Proyecto</a>
+        </div>
+
+        <!-- Proyecto 5: Documentación Técnica -->
+        <div class="proyecto">
+            <h3>📚 Guía de Documentación</h3>
+            <p>Estructura compleja con menús de navegación para organizar información técnica.</p>
+            <a href="https://vilcheslinense4.github.io/technical-docs/" target="_blank" class="btn">Ver Proyecto</a>
+        </div>
+
+        <!-- Proyecto 6: App del Clima Pro (EL NUEVO) -->
+        <div class="proyecto" style="border-left: 5px solid #00d2ff;">
+            <h3>🌤️ App del Clima Pro</h3>
+            <p>Aplicación avanzada que usa la <strong>API de OpenWeather</strong>. Muestra datos reales y cambia el fondo según la temperatura.</p>
+            <a href="https://vilcheslinense4.github.io/app-clima-pro/" target="_blank" class="btn" style="background: #00d2ff;">Ver Proyecto</a>
+        </div>
+
     </div>
 
-    <script>
-        function actualizarReloj() {
-            const ahora = new Date();
-            const fecha = ahora.toLocaleDateString('es-ES', { 
-                day: '2-digit', 
-                month: 'short', 
-                year: 'numeric' 
-            });
-            const tiempo = ahora.toLocaleTimeString('es-ES', { 
-                hour: '2-digit', 
-                minute: '2-digit', 
-                second: '2-digit' 
-            });
-            document.getElementById('reloj').innerText = `${fecha} | ${tiempo}`;
-        }
-        setInterval(actualizarReloj, 1000);
-        actualizarReloj();
-    </script>
-
+    <footer style="text-align: center; padding: 20px; color: #777;">
+        <p>&copy; 2024 VilchesLinense - Todos los proyectos están en GitHub</p>
+    </footer>
 </body>
 </html>
