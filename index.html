@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Portafolios. Proyectos.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de VilchesLinense</title>
     <link rel="stylesheet" href="./style.css">
-  </head>
-    
-  <body>
-    <h1>💻 Mis proyectos</h1>
+    <style>
+        /* Estilos rápidos para mejorar el diseño sin tocar mucho el CSS */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: white; text-align: center; padding: 20px; }
+        .header { margin-bottom: 40px; padding: 20px; border-bottom: 2px solid #38bdf8; }
+        .reloj { font-size: 1.2rem; color: #38bdf8; margin: 10px 0; font-family: monospace; }
+        .grid-proyectos { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .proyecto { background: #1e293b; padding: 20px; border-radius: 15px; border: 1px solid #334155; transition: transform 0.3s; }
+        .proyecto:hover { transform: translateY(-10px); border-color: #38bdf8; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .descripcion { color: #94a3b8; max-width: 600px; margin: 0 auto 20px; }
+        .boton-ver { display: inline-block; margin-top: 15px; padding: 10px 20px; background: #38bdf8; color: #0f172a; text-decoration: none; border-radius: 8px; font-weight: bold; }
+    </style>
+</head>
+<body>
 
-    <div class="proyecto">
-      <h2>🚦 Semáforo Inteligente</h2>
-      <a href="./semaforo/index.html">
-        Ver proyecto
-      </a>
+    <div class="header">
+        <h1>🚀 Mi Portafolio Digital</h1>
+        <p class="descripcion">Hola, soy un desarrollador en formación apasionado por crear soluciones tecnológicas. Aquí puedes ver la evolución de mis proyectos.</p>
+        
+        <!-- El Reloj Vivo -->
+        <div class="reloj" id="reloj">Cargando fecha y hora...</div>
     </div>
 
-    <div class="proyecto">
-      <h2>🧮 Calculadora</h2>
-      <a href="./calculadora/index.html">
-        Ver proyecto
-      </a>
-    </div> 
+    <div class="grid-proyectos">
+        <!-- Proyecto 1 -->
+        <div class="proyecto">
+            <h2>🚦 Semáforo</h2>
+            <p>Lógica de estados y tiempos controlada por JavaScript.</p>
+            <a href="./semaforo/index.html" class="boton-ver">Ver proyecto</a>
+        </div>
 
-    <div class="proyecto">
-      <h2>📝 Lista de tareas</h2>
-      <a href="https://vilcheslinense4.github.io/lista-tareas-js/">
-        Ver proyecto
-      </a>
+        <!-- Proyecto 2 -->
+        <div class="proyecto">
+            <h2>🧮 Calculadora</h2>
+            <p>Herramienta matemática con funciones básicas y diseño limpio.</p>
+            <a href="./calculadora/index.html" class="boton-ver">Ver proyecto</a>
+        </div> 
+
+        <!-- Proyecto 3 -->
+        <div class="proyecto">
+            <h2>📝 Lista de Tareas</h2>
+            <p>Gestión de actividades diarias con almacenamiento local.</p>
+            <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="boton-ver">Ver proyecto</a>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="proyecto">
+            <h2>📱 Generador QR</h2>
+            <p>Genera códigos QR para redes Wi-Fi y enlaces al instante.</p>
+            <a href="https://vilcheslinense4.github.io/generador-qr/" class="boton-ver">Ver proyecto</a>
+        </div>
     </div>
 
-    <div class="proyecto">
-      <h2>📱 Generador de QR</h2>
-      <a href="https://vilcheslinense4.github.io/generador-qr/">
-        Ver proyecto
-      </a>
-    </div>
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date();
+            const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('reloj').innerText = ahora.toLocaleDateString('es-ES', opciones);
+        }
+        setInterval(actualizarReloj, 1000);
+        actualizarReloj();
+    </script>
 
-  </body>
-  
+</body>
 </html>
