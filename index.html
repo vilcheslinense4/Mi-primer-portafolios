@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | VilchesLinense4</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
         body {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
             color: white;
             min-height: 100vh;
             display: flex;
@@ -15,43 +16,143 @@
             align-items: center;
             padding: 40px 20px;
         }
-        header { text-align: center; margin-bottom: 30px; }
-        h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .info-tiempo { background: rgba(255, 255, 255, 0.1); padding: 15px 35px; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); text-align: center; margin-bottom: 40px; }
-        #reloj { display: block; font-size: 2.2rem; font-weight: bold; color: #00d2ff; }
-        .container { width: 100%; max-width: 1000px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .proyecto { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); padding: 25px; border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.4s; display: flex; flex-direction: column; justify-content: space-between; }
-        .proyecto:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.2); border-color: #00d2ff; }
-        h3 { color: #00d2ff; margin-bottom: 12px; font-size: 1.4rem; }
-        .btn { background: #00d2ff; color: white; text-decoration: none; padding: 12px; border-radius: 15px; text-align: center; font-weight: bold; transition: 0.3s; }
+
+        header { text-align: center; margin-bottom: 30px; max-width: 800px; }
+        
+        h1 { font-size: 3rem; margin-bottom: 10px; color: #00d2ff; text-shadow: 0 0 20px rgba(0,210,255,0.3); }
+        
+        .descripcion { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; line-height: 1.6; }
+
+        /* Etiquetas de Habilidades */
+        .skills-container { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 35px; }
+        .skill-tag { 
+            background: rgba(0, 210, 255, 0.1); 
+            border: 1px solid #00d2ff; 
+            color: #00d2ff; 
+            padding: 8px 18px; 
+            border-radius: 25px; 
+            font-size: 0.9rem; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .skill-tag:hover { background: #00d2ff; color: #0f2027; }
+
+        /* Reloj y Fecha */
+        .info-tiempo { 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 20px 40px; 
+            border-radius: 20px; 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255,255,255,0.1); 
+            text-align: center; 
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        #fecha { display: block; font-size: 1rem; text-transform: capitalize; opacity: 0.7; margin-bottom: 5px; }
+        #reloj { display: block; font-size: 2.5rem; font-weight: bold; color: #00d2ff; }
+
+        /* Grid de Proyectos */
+        .container { 
+            width: 100%; 
+            max-width: 1100px; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+        }
+
+        .proyecto { 
+            background: rgba(255, 255, 255, 0.07); 
+            padding: 30px; 
+            border-radius: 30px; 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between;
+        }
+        
+        .proyecto:hover { 
+            transform: translateY(-12px); 
+            background: rgba(255, 255, 255, 0.12); 
+            border-color: #00d2ff;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        h3 { color: #00d2ff; margin-bottom: 15px; font-size: 1.5rem; }
+        .proyecto p { margin-bottom: 25px; font-size: 1rem; opacity: 0.8; line-height: 1.5; }
+        
+        .btn { 
+            background: #00d2ff; 
+            color: #0f2027; 
+            text-decoration: none; 
+            padding: 14px; 
+            border-radius: 18px; 
+            text-align: center; 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+        .btn:hover { background: #009ec3; transform: scale(1.02); }
+
+        footer { margin-top: 60px; opacity: 0.5; font-size: 0.9rem; padding-bottom: 20px; }
     </style>
 </head>
 <body>
+
     <header>
         <h1>VilchesLinense4</h1>
-        <div class="info-tiempo"><span id="reloj"></span></div>
+        <p class="descripcion">Desarrollador Junior apasionado por crear soluciones web interactivas. Especializado en JavaScript moderno y diseño de interfaces limpias.</p>
+        
+        <div class="skills-container">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript ES6</span>
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Responsive Design</span>
+        </div>
+
+        <div class="info-tiempo">
+            <span id="fecha"></span>
+            <span id="reloj"></span>
+        </div>
     </header>
+
     <div class="container">
         <div class="proyecto">
-            <h3>🌤️ App del Clima Pro</h3>
-            <a href="https://vilcheslinense4.github.io/app-clima-pro/" class="btn">Abrir App</a>
+            <h3>💱 Conversor Pro</h3>
+            <p>Cálculo de divisas en tiempo real con una interfaz minimalista y rápida.</p>
+            <a href="https://vilcheslinense4.github.io/conversor-divisas/" class="btn">Lanzar App</a>
         </div>
+
         <div class="proyecto">
-            <h3>💱 Conversor de Divisas</h3>
-            <a href="https://vilcheslinense4.github.io/conversor-divisas/" class="btn">Ver Proyecto</a>
-        </div>
-        <div class="proyecto">
-            <h3>✅ Lista de Tareas</h3>
+            <h3>✅ Task Manager</h3>
+            <p>Gestión de tareas diarias con almacenamiento local para no perder tus datos.</p>
             <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="btn">Ver Proyecto</a>
         </div>
+
         <div class="proyecto">
-            <h3>📲 Generador QR</h3>
-            <a href="https://vilcheslinense4.github.io/generador-qr/" class="btn">Ver Proyecto</a>
+            <h3>📲 QR Generator</h3>
+            <p>Convierte cualquier URL o texto en un código QR descargable al instante.</p>
+            <a href="https://vilcheslinense4.github.io/generador-qr/" class="btn">Probar ahora</a>
+        </div>
+
+        <div class="proyecto" style="border-style: dashed; opacity: 0.6;">
+            <h3>🚀 Próximamente</h3>
+            <p>Estamos trabajando en una nueva aplicación increíble. ¡Vuelve pronto!</p>
+            <span class="btn" style="background: #444; color: #888;">En desarrollo...</span>
         </div>
     </div>
+
+    <footer>© 2024 - Diseñado por VilchesLinense4</footer>
+
     <script>
-        function actualizar() { document.getElementById('reloj').innerText = new Date().toLocaleTimeString('es-ES'); }
-        setInterval(actualizar, 1000); actualizar();
+        function actualizar() {
+            const ahora = new Date();
+            const opciones = { weekday: 'long', day: 'numeric', month: 'long' };
+            document.getElementById('fecha').innerText = ahora.toLocaleDateString('es-ES', opciones);
+            document.getElementById('reloj').innerText = ahora.toLocaleTimeString('es-ES');
+        }
+        setInterval(actualizar, 1000);
+        actualizar();
     </script>
 </body>
 </html>
