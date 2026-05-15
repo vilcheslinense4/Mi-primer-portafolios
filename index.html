@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | VilchesLinense4</title>
+    <title>Jesús Vilches | Portafolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
@@ -14,93 +14,71 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            padding: 20px; /* Reducido para móvil */
         }
 
-        header { text-align: center; margin-bottom: 30px; max-width: 800px; }
+        header { text-align: center; margin-bottom: 25px; max-width: 800px; width: 100%; }
         
-        h1 { font-size: 3rem; margin-bottom: 10px; color: #00d2ff; text-shadow: 0 0 20px rgba(0,210,255,0.3); }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #00d2ff; text-shadow: 0 0 20px rgba(0,210,255,0.3); }
         
-        .descripcion { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; line-height: 1.6; }
+        .descripcion { font-size: 1rem; margin-bottom: 20px; opacity: 0.9; line-height: 1.5; padding: 0 10px; }
 
-        /* Etiquetas de Habilidades */
-        .skills-container { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 35px; }
+        .skills-container { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
         .skill-tag { 
-            background: rgba(0, 210, 255, 0.1); 
-            border: 1px solid #00d2ff; 
-            color: #00d2ff; 
-            padding: 8px 18px; 
-            border-radius: 25px; 
-            font-size: 0.9rem; 
-            font-weight: bold;
-            transition: 0.3s;
+            background: rgba(0, 210, 255, 0.1); border: 1px solid #00d2ff; 
+            color: #00d2ff; padding: 6px 14px; border-radius: 25px; 
+            font-size: 0.8rem; font-weight: bold;
         }
-        .skill-tag:hover { background: #00d2ff; color: #0f2027; }
 
-        /* Reloj y Fecha */
         .info-tiempo { 
-            background: rgba(255, 255, 255, 0.05); 
-            padding: 20px 40px; 
-            border-radius: 20px; 
-            backdrop-filter: blur(10px); 
+            background: rgba(255, 255, 255, 0.05); padding: 15px; 
+            border-radius: 20px; backdrop-filter: blur(10px); 
             border: 1px solid rgba(255,255,255,0.1); 
-            text-align: center; 
-            margin-bottom: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 35px; width: 100%; max-width: 350px;
         }
-        #fecha { display: block; font-size: 1rem; text-transform: capitalize; opacity: 0.7; margin-bottom: 5px; }
-        #reloj { display: block; font-size: 2.5rem; font-weight: bold; color: #00d2ff; }
+        #fecha { display: block; font-size: 0.9rem; text-transform: capitalize; opacity: 0.7; }
+        #reloj { display: block; font-size: 1.8rem; font-weight: bold; color: #00d2ff; }
 
         /* Grid de Proyectos */
         .container { 
             width: 100%; 
-            max-width: 1100px; 
+            max-width: 450px; /* Ajuste compacto para móvil */
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 30px; 
+            grid-template-columns: 1fr; 
+            gap: 20px; 
         }
 
         .proyecto { 
             background: rgba(255, 255, 255, 0.07); 
-            padding: 30px; 
-            border-radius: 30px; 
+            padding: 25px; 
+            border-radius: 25px; 
             border: 1px solid rgba(255, 255, 255, 0.1); 
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
             display: flex; 
             flex-direction: column; 
-            justify-content: space-between;
         }
         
-        .proyecto:hover { 
-            transform: translateY(-12px); 
-            background: rgba(255, 255, 255, 0.12); 
-            border-color: #00d2ff;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-        }
-        
-        h3 { color: #00d2ff; margin-bottom: 15px; font-size: 1.5rem; }
-        .proyecto p { margin-bottom: 25px; font-size: 1rem; opacity: 0.8; line-height: 1.5; }
+        h3 { color: #00d2ff; margin-bottom: 10px; font-size: 1.3rem; }
+        .proyecto p { margin-bottom: 20px; font-size: 0.9rem; opacity: 0.8; line-height: 1.4; }
         
         .btn { 
             background: #00d2ff; 
             color: #0f2027; 
             text-decoration: none; 
-            padding: 14px; 
-            border-radius: 18px; 
+            padding: 12px; 
+            border-radius: 15px; 
             text-align: center; 
             font-weight: bold; 
-            transition: 0.3s;
+            font-size: 0.9rem;
         }
-        .btn:hover { background: #009ec3; transform: scale(1.02); }
 
-        footer { margin-top: 60px; opacity: 0.5; font-size: 0.9rem; padding-bottom: 20px; }
+        footer { margin-top: 50px; opacity: 0.5; font-size: 0.8rem; padding-bottom: 20px; text-align: center; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>VilchesLinense4</h1>
-        <p class="descripcion">Desarrollador Junior apasionado por crear soluciones web interactivas. Especializado en JavaScript moderno y diseño de interfaces limpias.</p>
+        <h1>Jesús Vilches</h1>
+        <p class="descripcion">Desarrollador Junior apasionado por crear soluciones web interactivas y diseño de interfaces limpias.</p>
         
         <div class="skills-container">
             <span class="skill-tag">HTML5</span>
@@ -118,21 +96,27 @@
 
     <div class="container">
         <div class="proyecto">
-            <h3>💱 Conversor Pro</h3>
+            <h3>🔑 Generador Pro</h3>
+            <p>Seguridad avanzada en un instante. Genera contraseñas fuertes y personalizables.</p>
+            <a href="https://vilcheslinense4.github.io/generador-pass-js/" class="btn">Ver Proyecto</a>
+        </div>
+
+        <div class="proyecto">
+            <h3>⚖️ Conversor Pro</h3>
             <p>Cálculo de divisas en tiempo real con una interfaz minimalista y rápida.</p>
-            <a href="https://vilcheslinense4.github.io/conversor-divisas/" class="btn">Lanzar App</a>
+            <a href="https://vilcheslinense4.github.io/Conversor-pro/" class="btn">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>✅ Task Manager</h3>
             <p>Gestión de tareas diarias con almacenamiento local para no perder tus datos.</p>
-            <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/Task-Manager/" class="btn">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>📲 QR Generator</h3>
             <p>Convierte cualquier URL o texto en un código QR descargable al instante.</p>
-            <a href="https://vilcheslinense4.github.io/generador-qr/" class="btn">Probar ahora</a>
+            <a href="https://vilcheslinense4.github.io/Generador-de-codigo-QR/" class="btn">Ver Proyecto</a>
         </div>
 
         <div class="proyecto" style="border-style: dashed; opacity: 0.6;">
@@ -142,7 +126,7 @@
         </div>
     </div>
 
-    <footer>© 2024 - Diseñado por VilchesLinense4</footer>
+    <footer>© 2024 - Diseñado por Jesús Vilches</footer>
 
     <script>
         function actualizar() {
