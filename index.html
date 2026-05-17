@@ -14,113 +14,126 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
-        header { text-align: center; margin-bottom: 25px; max-width: 800px; width: 100%; }
+        header { text-align: center; margin-bottom: 40px; max-width: 800px; width: 100%; }
         
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #00d2ff; text-shadow: 0 0 20px rgba(0,210,255,0.3); }
+        h1 { font-size: 2.8rem; margin-bottom: 15px; color: #00d2ff; text-shadow: 0 0 20px rgba(0,210,255,0.3); }
         
-        .descripcion { font-size: 1rem; margin-bottom: 20px; opacity: 0.9; line-height: 1.5; padding: 0 10px; }
+        .descripcion { font-size: 1.1rem; margin-bottom: 25px; opacity: 0.9; line-height: 1.6; padding: 0 10px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-        .skills-container { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
+        .skills-container { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
         .skill-tag { 
-            background: rgba(0, 210, 255, 0.1); border: 1px solid #00d2ff; 
+            background: rgba(0, 210, 255, 0.1); border: 1px solid rgba(0, 210, 255, 0.4); 
             color: #00d2ff; padding: 6px 14px; border-radius: 25px; 
-            font-size: 0.8rem; font-weight: bold;
+            font-size: 0.85rem; font-weight: bold;
+            transition: all 0.3s ease;
         }
+        .skill-tag:hover { background: rgba(0, 210, 255, 0.25); transform: translateY(-2px); }
 
         .info-tiempo { 
-            background: rgba(255, 255, 255, 0.05); padding: 15px; 
-            border-radius: 20px; backdrop-filter: blur(10px); 
+            background: rgba(255, 255, 255, 0.03); padding: 12px 25px; 
+            border-radius: 30px; backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.1); 
-            margin-bottom: 35px; width: 100%; max-width: 350px;
-            text-align: center;
+            margin: 0 auto 10px auto; width: fit-content;
+            display: flex; flex-direction: column; align-items: center; gap: 2px;
         }
-        #fecha { display: block; font-size: 0.9rem; text-transform: capitalize; opacity: 0.7; }
-        #reloj { display: block; font-size: 1.8rem; font-weight: bold; color: #00d2ff; }
+        #fecha { display: block; font-size: 0.85rem; text-transform: capitalize; opacity: 0.7; letter-spacing: 0.5px; }
+        #reloj { display: block; font-size: 1.6rem; font-weight: bold; color: #00d2ff; }
 
+        /* MEJORA: Contenedor inteligente. Cambia a 2 o 3 columnas si hay espacio en pantalla */
         .container { 
             width: 100%; 
-            max-width: 400px; 
+            max-width: 1000px; /* Ampliado para albergar más columnas en PC */
             display: grid; 
-            grid-template-columns: 1fr; 
-            gap: 20px; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-bottom: 40px;
         }
 
+        /* MEJORA: Tarjetas con estilo Glassmorphism (Cristal) */
         .proyecto { 
-            background: rgba(255, 255, 255, 0.07); 
+            background: rgba(255, 255, 255, 0.05); 
             padding: 25px; 
-            border-radius: 25px; 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 20px; 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             display: flex; 
             flex-direction: column; 
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            justify-content: space-between; /* Alinea los botones abajo del todo si el texto varía */
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        /* Efecto de elevación al pasar el ratón */
         .proyecto:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
-            border-color: #00d2ff;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 210, 255, 0.15);
+            border-color: rgba(0, 210, 255, 0.5);
+            background: rgba(255, 255, 255, 0.08);
         }
         
-        h3 { color: #00d2ff; margin-bottom: 10px; font-size: 1.3rem; }
-        .proyecto p { margin-bottom: 20px; font-size: 0.9rem; opacity: 0.8; line-height: 1.4; }
+        h3 { color: #00d2ff; margin-bottom: 12px; font-size: 1.3rem; display: flex; align-items: center; gap: 8px; }
+        .proyecto p { margin-bottom: 20px; font-size: 0.95rem; opacity: 0.8; line-height: 1.5; }
         
         .btn { 
             background: #00d2ff; 
             color: #0f2027; 
             text-decoration: none; 
             padding: 12px; 
-            border-radius: 15px; 
+            border-radius: 12px; 
             text-align: center; 
             font-weight: bold; 
             font-size: 0.9rem;
             cursor: pointer;
             border: none;
-            transition: opacity 0.2s;
+            transition: all 0.2s ease;
+            width: 100%;
+            margin-top: auto; /* Empuja el botón al fondo de la tarjeta */
         }
 
-        .btn:hover { opacity: 0.9; }
+        .btn:hover { opacity: 0.9; transform: scale(1.02); box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3); }
 
         /* Estilos de la sección de contacto */
         .contacto-seccion {
             width: 100%;
-            max-width: 400px;
-            margin-top: 50px;
-            background: rgba(255, 255, 255, 0.05);
+            max-width: 450px;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.04);
             padding: 30px;
-            border-radius: 25px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
         .contacto-seccion h2 {
             text-align: center;
             color: #00d2ff;
             margin-bottom: 20px;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         }
 
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-size: 0.9rem; opacity: 0.8; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-size: 0.9rem; opacity: 0.8; }
         .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(0, 0, 0, 0.2);
             color: white;
-            font-size: 1rem;
+            font-size: 0.95rem;
             outline: none;
+            transition: border-color 0.2s;
         }
 
         .form-group input:focus, .form-group textarea:focus {
             border-color: #00d2ff;
         }
 
-        footer { margin-top: 50px; opacity: 0.5; font-size: 0.8rem; padding-bottom: 20px; text-align: center; }
+        footer { margin-top: 60px; opacity: 0.5; font-size: 0.85rem; padding-bottom: 10px; text-align: center; }
     </style>
 </head>
 <body>
@@ -181,10 +194,10 @@
             <a href="https://vilcheslinense4.github.io/app-clima-js/" class="btn">Ver Proyecto</a>
         </div>
 
-        <div class="proyecto" style="border-style: dashed; opacity: 0.6;">
+        <div class="proyecto" style="border-style: dashed; opacity: 0.5; background: transparent;">
             <h3>🚀 Próximamente</h3>
             <p>Estamos trabajando en una nueva aplicación increíble. ¡Vuelve pronto!</p>
-            <span class="btn" style="background: #444; color: #888;">En desarrollo...</span>
+            <span class="btn" style="background: rgba(255,255,255,0.05); color: #777; cursor: default; box-shadow: none; transform: none;">En desarrollo...</span>
         </div>
     </div>
 
