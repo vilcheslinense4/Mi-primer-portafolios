@@ -133,6 +133,7 @@
             <span class="skill-tag">HTML5</span>
             <span class="skill-tag">CSS3</span>
             <span class="skill-tag">JavaScript ES6</span>
+            <span class="skill-tag">API OpenWeather</span>
             <span class="skill-tag">Git & GitHub</span>
             <span class="skill-tag">Responsive Design</span>
         </div>
@@ -174,6 +175,12 @@
             <a href="https://vilcheslinense4.github.io/gestor-gastos-personales/" class="btn">Ver Proyecto</a>
         </div>
 
+        <div class="proyecto">
+            <h3>☀️ Weather Pro</h3>
+            <p>Clima global en tiempo real. Interfaz Glassmorphism con paisajes y efectos climáticos dinámicos.</p>
+            <a href="https://vilcheslinense4.github.io/app-clima-js/" class="btn">Ver Proyecto</a>
+        </div>
+
         <div class="proyecto" style="border-style: dashed; opacity: 0.6;">
             <h3>🚀 Próximamente</h3>
             <p>Estamos trabajando en una nueva aplicación increíble. ¡Vuelve pronto!</p>
@@ -206,7 +213,7 @@
         function actualizar() {
             const ahora = new Date();
             const opciones = { weekday: 'long', day: 'numeric', month: 'long' };
-            document.getElementById('fecha').innerText = ahora.toLocaleDateString('es-ES', opciones);
+            document.getElementById('fecha').innerText = Pattern = ahora.toLocaleDateString('es-ES', opciones);
             document.getElementById('reloj').innerText = ahora.toLocaleTimeString('es-ES');
         }
         setInterval(actualizar, 1000);
