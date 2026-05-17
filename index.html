@@ -213,7 +213,7 @@
         function actualizar() {
             const ahora = new Date();
             const opciones = { weekday: 'long', day: 'numeric', month: 'long' };
-            document.getElementById('fecha').innerText = Pattern = ahora.toLocaleDateString('es-ES', opciones);
+            document.getElementById('fecha').innerText = ahora.toLocaleDateString('es-ES', opciones);
             document.getElementById('reloj').innerText = ahora.toLocaleTimeString('es-ES');
         }
         setInterval(actualizar, 1000);
