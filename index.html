@@ -23,7 +23,6 @@
         
         .descripcion { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; line-height: 1.6; padding: 0 10px; max-width: 600px; text-align: center; }
 
-        /* CONTENEDOR DE HABILIDADES REVISADO (COLORES DIFERENCIADOS) */
         .skills-grid-new {
             display: flex;
             flex-wrap: wrap;
@@ -39,7 +38,7 @@
             min-width: 220px;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(0, 255, 170, 0.15);
-            border-top: 3px solid #00ffaa; /* Verde neón para diferenciarlo de los proyectos */
+            border-top: 3px solid #00ffaa; 
             border-radius: 14px;
             padding: 16px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -48,16 +47,9 @@
             transition: all 0.3s ease;
         }
 
-        .skills-column-cyber:hover {
-            border-color: rgba(0, 255, 170, 0.5);
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 255, 170, 0.1);
-        }
-
         .skills-column-cyber h3 {
             font-size: 0.9rem;
-            color: #00ffaa; /* Color verde tecnológico limpio */
+            color: #00ffaa; 
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 12px;
@@ -90,7 +82,6 @@
             font-size: 0.9rem;
         }
 
-        /* Contenedor inteligente */
         .container { 
             width: 100%; 
             max-width: 1000px; 
@@ -101,7 +92,6 @@
             margin-top: 15px;
         }
 
-        /* Tarjetas con estilo Glassmorphism (Cristal) */
         .proyecto { 
             background: rgba(255, 255, 255, 0.05); 
             padding: 25px; 
@@ -112,19 +102,13 @@
             display: flex; 
             flex-direction: column; 
             justify-content: space-between; 
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .proyecto:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 210, 255, 0.15);
-            border-color: rgba(0, 210, 255, 0.5);
-            background: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
         }
         
-        .proyecto h3 { color: #00d2ff; margin-bottom: 12px; font-size: 1.3rem; display: flex; align-items: center; gap: 8px; text-transform: none; letter-spacing: normal; }
+        .proyecto h3 { color: #00d2ff; margin-bottom: 12px; font-size: 1.3rem; display: flex; align-items: center; gap: 8px; }
         .proyecto p { margin-bottom: 20px; font-size: 0.95rem; opacity: 0.8; line-height: 1.5; }
         
+        /* BOTÓN CON EFECTOS TÁCTILES MEJORADOS */
         .btn { 
             background: #00d2ff; 
             color: #0f2027; 
@@ -136,14 +120,18 @@
             font-size: 0.9rem;
             cursor: pointer;
             border: none;
-            transition: all 0.2s ease;
+            transition: background 0.2s, transform 0.1s;
             width: 100%;
             margin-top: auto; 
+            display: block;
         }
 
-        .btn:hover { opacity: 0.9; transform: scale(1.02); box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3); }
+        /* Al mantener pulsado en móvil o hacer click, cambia de color radicalmente y se hunde */
+        .btn:active { 
+            background: #00ffaa !important; /* Cambio visual fuerte a verde neón al pulsar */
+            transform: scale(0.95); /* Se encoge sutilmente dando sensación de botón real */
+        }
 
-        /* Estilos de la sección de contacto */
         .contacto-seccion {
             width: 100%;
             max-width: 450px;
@@ -156,15 +144,10 @@
             -webkit-backdrop-filter: blur(10px);
         }
 
-        .contacto-seccion h2 {
-            text-align: center;
-            color: #00d2ff;
-            margin-bottom: 20px;
-            font-size: 1.6rem;
-        }
-
+        .contacto-seccion h2 { text-align: center; color: #00d2ff; margin-bottom: 20px; font-size: 1.6rem; }
         .form-group { margin-bottom: 18px; }
         .form-group label { display: block; margin-bottom: 6px; font-size: 0.9rem; opacity: 0.8; }
+        
         .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px;
@@ -177,22 +160,13 @@
             transition: border-color 0.2s;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: #00d2ff;
-        }
+        .form-group input:focus, .form-group textarea:focus { border-color: #00d2ff; }
 
         footer { margin-top: 60px; opacity: 0.5; font-size: 0.85rem; padding-bottom: 10px; text-align: center; }
 
-        /* RESPONSIVE PARA EL SMARTPHONE */
         @media (max-width: 650px) {
-            .skills-grid-new {
-                flex-direction: column;
-                gap: 15px;
-                padding: 0 10px;
-            }
-            .skills-column-cyber {
-                min-width: 100%;
-            }
+            .skills-grid-new { flex-direction: column; gap: 15px; padding: 0 10px; }
+            .skills-column-cyber { min-width: 100%; }
         }
     </style>
 </head>
@@ -203,7 +177,6 @@
         <p class="descripcion">Desarrollador Junior apasionado por crear soluciones web interactivas y diseño de interfaces limpias.</p>
         
         <div class="skills-grid-new">
-            
             <div class="skills-column-cyber">
                 <h3>🛠️ Tecnologías Core</h3>
                 <ul class="skills-list-cyber">
@@ -212,7 +185,6 @@
                     <li>Git & GitHub (Repositorios)</li>
                 </ul>
             </div>
-
             <div class="skills-column-cyber">
                 <h3>📡 Conexiones y APIs</h3>
                 <ul class="skills-list-cyber">
@@ -220,7 +192,6 @@
                     <li>Web Audio API (Audio sintetizado)</li>
                 </ul>
             </div>
-
             <div class="skills-column-cyber">
                 <h3>🧩 Arquitectura</h3>
                 <ul class="skills-list-cyber">
@@ -229,7 +200,6 @@
                     <li>Multi-state UI (Interfaces dinámicas)</li>
                 </ul>
             </div>
-
         </div>
     </header>
 
@@ -237,49 +207,49 @@
         <div class="proyecto">
             <h3>🔑 Generador Pro</h3>
             <p>Seguridad avanzada en un instante. Genera contraseñas fuertes y personalizables.</p>
-            <a href="https://vilcheslinense4.github.io/generador-pass-js-/" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/generador-pass-js-/" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>⚖️ Conversor Pro</h3>
             <p>Cálculo de divisas en tiempo real con una interfaz minimalista y rápida.</p>
-            <a href="https://vilcheslinense4.github.io/conversor-divisas/" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/conversor-divisas/" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>✅ Task Manager</h3>
             <p>Gestión de tareas diarias con almacenamiento local para no perder tus datos.</p>
-            <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/lista-tareas-js/" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>📲 QR Generator</h3>
             <p>Convierte cualquier URL o texto en un código QR descargable al instante.</p>
-            <a href="https://vilcheslinense4.github.io/generador-qr/" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/generador-qr/" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>💰 Money Tracker</h3>
             <p>Control de gastos e ingresos con filtros por meses y guardado persistente.</p>
-            <a href="https://vilcheslinense4.github.io/gestor-gastos-personales/" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/gestor-gastos-personales/" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>☀️ Weather Pro</h3>
             <p>Clima global en tiempo real. Interfaz Glassmorphism con landscapes y efectos climáticos dinámicos.</p>
-            <a href="https://vilcheslinense4.github.io/app-clima-js/" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/app-clima-js/" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>🛡️ CyberShield VPN</h3>
             <p>Simulador de conexión segura con interfaz hacker, cambio de nodos global, latencia dinámica y registros en consola.</p>
-            <a href="https://vilcheslinense4.github.io/simulador-vpn/index.html" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/simulador-vpn/index.html" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto">
             <h3>⚡ CyberType Pro</h3>
             <p>Test de velocidad y precisión en teclado con base de datos de usuarios local, sonidos sintetizados con Audio API y teclado móvil optimizado sin autocorrectores.</p>
-            <a href="https://vilcheslinense4.github.io/juego-tecleo-js/index.html" class="btn">Ver Proyecto</a>
+            <a href="https://vilcheslinense4.github.io/juego-tecleo-js/index.html" class="btn fx-click">Ver Proyecto</a>
         </div>
 
         <div class="proyecto" style="border-style: dashed; opacity: 0.5; background: transparent;">
@@ -304,10 +274,45 @@
                 <label>Tu mensaje:</label>
                 <textarea name="message" rows="4" required placeholder="Hola Jesús, me gustaría hablar sobre..."></textarea>
             </div>
-            <button type="submit" class="btn" style="width: 100%; background: linear-gradient(90deg, #00d2ff, #00ffaa);">Enviar Mensaje</button>
+            <button type="submit" class="btn fx-click" style="width: 100%; background: linear-gradient(90deg, #00d2ff, #00ffaa);">Enviar Mensaje</button>
         </form>
     </div>
 
     <footer>© 2026 - Diseñado por Jesús Vilches</footer>
+
+    <script>
+        // Función mágica que genera el sonido cibernético usando código puro
+        function playCyberClick() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                const audioCtx = new AudioContext();
+                
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                
+                osc.type = 'sine'; // Tono limpio digital
+                osc.frequency.setValueAtTime(1200, audioCtx.currentTime); // Frecuencia alta para simular un click electrónico
+                osc.frequency.exponentialRampToValueAtTime(300, audioCtx.currentTime + 0.05);
+                
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime); // Volumen moderado para que no moleste
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
+                
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.05);
+            } catch (e) {
+                console.log("Audio no soportado o bloqueado por el navegador.");
+            }
+        }
+
+        // Aplicar el evento de sonido a todos los botones interactivos al pulsar (táctil o ratón)
+        document.querySelectorAll('.fx-click').forEach(button => {
+            // Captura tanto clicks en PC como toques rápidos en el iPhone
+            button.addEventListener('mousedown', playCyberClick);
+            button.addEventListener('touchstart', playCyberClick);
+        });
+    </script>
 </body>
 </html>
