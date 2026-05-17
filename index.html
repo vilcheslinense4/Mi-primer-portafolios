@@ -19,7 +19,7 @@
 
         header { text-align: center; margin-bottom: 35px; max-width: 800px; width: 100%; display: flex; flex-direction: column; align-items: center; }
         
-        h1 { font-size: 2.8rem; margin-bottom: 15px; color: #00d2ff; text-shadow: 0 0 20px rgba(0,210,255,0.3); }
+        h1 { font-size: 2.8rem; margin-bottom: 15px; color: #00d2ff; text-shadow: 0 0 20px rgba(0,210,255,0.3); transition: font-size 0.2s; }
         
         .descripcion { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; line-height: 1.6; padding: 0 10px; max-width: 600px; text-align: center; }
 
@@ -108,7 +108,6 @@
         .proyecto h3 { color: #00d2ff; margin-bottom: 12px; font-size: 1.3rem; display: flex; align-items: center; gap: 8px; }
         .proyecto p { margin-bottom: 20px; font-size: 0.95rem; opacity: 0.8; line-height: 1.5; }
         
-        /* BOTÓN CON EFECTOS TÁCTILES MEJORADOS */
         .btn { 
             background: #00d2ff; 
             color: #0f2027; 
@@ -126,10 +125,9 @@
             display: block;
         }
 
-        /* Al mantener pulsado en móvil o hacer click, cambia de color radicalmente y se hunde */
         .btn:active { 
-            background: #00ffaa !important; /* Cambio visual fuerte a verde neón al pulsar */
-            transform: scale(0.95); /* Se encoge sutilmente dando sensación de botón real */
+            background: #00ffaa !important; 
+            transform: scale(0.95); 
         }
 
         .contacto-seccion {
@@ -157,14 +155,19 @@
             color: white;
             font-size: 0.95rem;
             outline: none;
-            transition: border-color 0.2s;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
-        .form-group input:focus, .form-group textarea:focus { border-color: #00d2ff; }
+        .form-group input:focus, .form-group textarea:focus { 
+            border-color: #00d2ff; 
+            box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+        }
 
         footer { margin-top: 60px; opacity: 0.5; font-size: 0.85rem; padding-bottom: 10px; text-align: center; }
 
         @media (max-width: 650px) {
+            /* Cambio Ideado Nº 3: Reducción tipográfica precisa en iPhone */
+            h1 { font-size: 2.3rem; } 
             .skills-grid-new { flex-direction: column; gap: 15px; padding: 0 10px; }
             .skills-column-cyber { min-width: 100%; }
         }
@@ -252,10 +255,10 @@
             <a href="https://vilcheslinense4.github.io/juego-tecleo-js/index.html" class="btn fx-click">Ver Proyecto</a>
         </div>
 
-        <div class="proyecto" style="border-style: dashed; opacity: 0.5; background: transparent;">
-            <h3>🚀 Próximamente</h3>
-            <p>Estamos trabajando en una nueva aplicación increíble. ¡Vuelve pronto!</p>
-            <span class="btn" style="background: rgba(255,255,255,0.05); color: #777; cursor: default; box-shadow: none; transform: none;">En desarrollo...</span>
+        <div class="proyecto" style="border: 2px dashed #ff0055; background: rgba(255, 0, 85, 0.02); box-shadow: inset 0 0 15px rgba(255, 0, 85, 0.05);">
+            <h3 style="color: #ff0055;">🚀 Próximamente</h3>
+            <p>Preparando el proyecto Nº 9. Un desafío interactivo total que se sumará pronto al catálogo.</p>
+            <span class="btn" style="background: rgba(255,0,85,0.1); color: #ff0055; cursor: default; box-shadow: none; transform: none; border: 1px solid rgba(255,0,85,0.3);">En desarrollo...</span>
         </div>
     </div>
 
@@ -281,7 +284,6 @@
     <footer>© 2026 - Diseñado por Jesús Vilches</footer>
 
     <script>
-        // Función mágica que genera el sonido cibernético usando código puro
         function playCyberClick() {
             try {
                 const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -290,11 +292,11 @@
                 const osc = audioCtx.createOscillator();
                 const gain = audioCtx.createGain();
                 
-                osc.type = 'sine'; // Tono limpio digital
-                osc.frequency.setValueAtTime(1200, audioCtx.currentTime); // Frecuencia alta para simular un click electrónico
+                osc.type = 'sine'; 
+                osc.frequency.setValueAtTime(1200, audioCtx.currentTime); 
                 osc.frequency.exponentialRampToValueAtTime(300, audioCtx.currentTime + 0.05);
                 
-                gain.gain.setValueAtTime(0.15, audioCtx.currentTime); // Volumen moderado para que no moleste
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime); 
                 gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
                 
                 osc.connect(gain);
@@ -303,13 +305,11 @@
                 osc.start();
                 osc.stop(audioCtx.currentTime + 0.05);
             } catch (e) {
-                console.log("Audio no soportado o bloqueado por el navegador.");
+                console.log("Audio deshabilitado.");
             }
         }
 
-        // Aplicar el evento de sonido a todos los botones interactivos al pulsar (táctil o ratón)
         document.querySelectorAll('.fx-click').forEach(button => {
-            // Captura tanto clicks en PC como toques rápidos en el iPhone
             button.addEventListener('mousedown', playCyberClick);
             button.addEventListener('touchstart', playCyberClick);
         });
